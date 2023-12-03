@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'ITGAM', author:" Luis Alfonso & josh barajas"});
+  res.render('index', { title: 'ITGAM', author:" Juan Victoriño & Rcicardo Cortes"});
 });
 
 // Pripio
