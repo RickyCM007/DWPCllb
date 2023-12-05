@@ -18,7 +18,10 @@ router.get('/dashboard', userController.dashboard);
 router.get('book/addbook', userController.addform);
 
 // GET '/project/add
-router.get('/add', userController.add);
+router.get('/add', bookController.add);
+
+// POST "/project/add"
+router.post('/add', bookController.addPost);
 
 // Exporto este tramo de ruta
 export default router;
