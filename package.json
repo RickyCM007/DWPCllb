@@ -21,9 +21,9 @@
   },
   "scripts": {
     "start": "node ./dist/bin/www",
-    "dev": "NODE_ENV=development DEBUG=s04e01-proyecto-final:server babel-watch ./server/bin/www",
+    "dev": "NODE_ENV=development DEBUG=dwpcllb:server babel-watch ./server/bin/www",
     "devc": "NODE_ENV=development webpack serve --config ./webpack.dev.config.js --mode development",
-    "devb": "DEBUG=s04e01-proyecto-final:server && babel-watch ./server/bin/www",
+    "devb": "DEBUG=dwpcllb:server && babel-watch ./server/bin/www",
     "cleans": "rm -rf ./dist",
     "cleanc": "rm -f ./public/bundle.js ./public/styles/app.css",
     "b:s": "npm run cleans && babel ./server --out-dir dist --copy-files",
