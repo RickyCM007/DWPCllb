@@ -1,4 +1,5 @@
 import * as Yup from 'yup';
+import log from '../../config/winston';
 
 // Crear schema de validacion
 const signUpSchema = Yup.object().shape({
@@ -12,18 +13,36 @@ const signUpSchema = Yup.object().shape({
     [Yup.ref('password')],
     'El password de confirmación no coincide',
   ),
+  code: Yup.string()
+    .max(9, 'No escribir mas de 9 caracteres')
+    .required('Se requiere codigo de estudiante'),
+  grade: Yup.string().required('Se requiere ingresar un grado'),
+  section: Yup.string().required('Se requiere ingresar la seccion'),
 });
 
 const sigUpGetter = (req) => {
-  // Desestructurando la informacion
-  const { firstName, lastname, mail, password, cpassword } = req.body;
-  // Se ingresa al objeto singup
+  const {
+    firstName,
+    lastname,
+    mail,
+    password,
+    cpassword,
+    code,
+    grade,
+    section,
+  } = req.body; // Se agregan todas las variables
+  log.info(
+    `Se extraen datos de la petición: name ${firstName}, apellido ${lastname}, correo ${mail}, password${password}, cpassword${cpassword}, codigo ${code}, grado: ${grade},seccion ${section}`,
+  );
   return {
     firstName,
     lastname,
     mail,
     password,
     cpassword,
+    code,
+    grade,
+    section,
   };
 };
 

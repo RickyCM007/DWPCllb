@@ -36,8 +36,7 @@ const myConsoleFormat = combine(
   // Agregando Fecha
   // Funcion de impresion
   printf(
-    (info) =>
-      `${info.level}: ${info.label}: ${info.timestamp}: ${info.message}`,
+    (info) => `${info.level}: ${info.label}: ${info.timestamp}: ${info.message}`,
   ),
 );
 

@@ -50,9 +50,9 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, 'css-loader']
       }
     ]
-},
-plugins: [new MiniCssExtractPlugin({
-  // Archivo css de salida
-  filename: 'styles/app.css'
-})]
+  },
+  plugins: [new MiniCssExtractPlugin({
+    // Archivo css de salida
+    filename: 'styles/app.css'
+  })]
 }

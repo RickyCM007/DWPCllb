@@ -19,7 +19,6 @@ const getbook = (req) => {
   log.info(
     `Se extraen datos de la petición: name ${name}, autor ${autor}, categoria ${categoria}, isbn ${isbn}, numero_copias ${numerocopias}, description: ${description}`,
   );
-  // Regresando el objeto proyecto
   return {
     name,
     autor,

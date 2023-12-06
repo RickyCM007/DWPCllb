@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // exportamos un Configuration Options Object
 module.exports = {
-  // 1.- Estableciendo el archivo indexador
+    // 1.- Estableciendo el archivo indexador
     // del front-end
     entry: "./client/index.js",
     // 2.- Estableciendo el archivo de salida
@@ -43,7 +43,7 @@ module.exports = {
                   {
                     'modules': false,
                     'useBuiltIns': 'usage',
-                    'targets': '> 0.25%, not dead',
+                    'targets': '> 0.25%, not dead', //version final de scripts, puede ser espécifico o genérico
                     'corejs': 3
                   }
                 ]
@@ -57,9 +57,9 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, 'css-loader']
       }
     ]
-},
-plugins: [new MiniCssExtractPlugin({
-  // Archivo css de salida
-  filename: 'styles/app.css'
-})]
+  },
+  plugins: [new MiniCssExtractPlugin({
+    // Archivo css de salida
+    filename: 'styles/app.css'
+  })]
 }

@@ -22,7 +22,6 @@ import configTemplateEngine from './config/templateEngine';
 import log from './config/winston';
 // importing debuglogger
 import debug from './services/debugLogger';
-
 // Importing Router
 import router from './router';
 
@@ -91,7 +90,7 @@ app.use(cookieParser());
 app.use(methodOverride('_method'));
 // Habilitando manejo de sesiones y mensajes flash
 configSession(app);
-// crea un server de archivos estaticos
+// Crea un server de archivos estaticos
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // Registro de Rutas

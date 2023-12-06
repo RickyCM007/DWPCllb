@@ -6,8 +6,10 @@ const router = express.Router();
 router.get('/', (req, res) => {
   res.render('index', {
     title: 'ITGAM',
-    author: 'Juan Victoriño & Ricardo Cortes',
+    author: 'Ricardo',
   });
 });
+
+// Pripio
 
 export default router;
