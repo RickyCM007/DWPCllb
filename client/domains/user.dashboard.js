@@ -1,6 +1,6 @@
-export default async function deleteBook(id) {
+export default async function deleteUser(id) {
   try {
-    const url = `${window.location.protocol}//${window.location.host}/book/${id}`;
+    const url = `${window.location.protocol}//${window.location.host}/user/${id}`;
     console.log(url);
     const response = await fetch(url, {
       method: 'DELETE',
