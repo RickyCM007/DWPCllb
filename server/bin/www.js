@@ -2,10 +2,6 @@
 
 /**
  * Module dependencies.
- #!/usr/bin/env node
-
-/**
- * Module dependencies.
  */
 
 import http from 'http';
