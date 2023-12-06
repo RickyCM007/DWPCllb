@@ -17,7 +17,6 @@ import connectWithRetry from '../database/mongooseConnection';
 /**
  * Create HTTP server.
  */
-
 log.info('The server is create from express instance');
 const server = http.createServer(app);
 
